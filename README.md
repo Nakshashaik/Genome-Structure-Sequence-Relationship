@@ -1,40 +1,41 @@
-<<<<<<< HEAD
-# Genome-Structure-Sequence-Relationship
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧬 Deep Learning Approaches for Genome Structure–Sequence Relationship
 
-## Getting Started
+## 📌 Overview
+This project investigates whether **DNA sequence alone can predict chromatin interactions**, which are essential for gene regulation and 3D genome organization.
 
-First, run the development server:
+A **dual-branch Convolutional Neural Network (CNN)** is developed to model interactions between promoter and enhancer regions using only genomic sequence data, eliminating the need for expensive experimental techniques like Hi-C.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧠 Problem Statement
+Chromatin interactions regulate gene expression by bringing distant DNA regions into proximity.  
+Traditional methods like Hi-C are:
+- Expensive  
+- Time-consuming  
+- Not scalable across conditions  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+👉 This project aims to **predict promoter–enhancer interactions using only DNA sequence information**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Features
+- 🧬 Sequence-based chromatin interaction prediction  
+- 🧠 Dual-input CNN architecture  
+- ⚖️ Distance-matched negative sampling  
+- 🧪 Promoter-level data split (prevents data leakage)  
+- 📊 Performance evaluation using ROC-AUC  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏗️ Model Architecture
+- Two input branches:
+  - Promoter sequence  
+  - Enhancer sequence  
+- 1D Convolutional layers extract sequence motifs  
+- Feature concatenation  
+- Fully connected layers for classification  
+- Sigmoid activation → interaction probability  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> 43855a0 (Initial commit)
+## 📂 Project Structure
