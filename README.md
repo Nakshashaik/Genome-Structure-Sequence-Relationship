@@ -36,7 +36,7 @@ Traditional methods like Hi-C are:
 - Fully connected layers for classification  
 - Sigmoid activation → interaction probability  
 
-
+---
 
 ## 🧭 Description
 - **data/** → Contains raw and processed genomic datasets  
@@ -46,7 +46,6 @@ Traditional methods like Hi-C are:
 - **results/** → Performance metrics and visualizations  
 - **app/** → Flask-based deployment (optional)  
 - **main.py** → Runs the training pipeline  
-
 
 ---
 
@@ -69,7 +68,7 @@ Traditional methods like Hi-C are:
 | CNN                      | ~0.94   | ~0.98 | Strong performance |
 | CNN (Promoter Split)     | ~0.78   | ~0.87 | Generalized model |
 
-👉 CNN clearly outperforms other models by capturing sequence patterns :contentReference[oaicite:0]{index=0}  
+👉 CNN clearly outperforms other models by capturing sequence patterns.
 
 ---
 
@@ -79,44 +78,3 @@ Traditional methods like Hi-C are:
 git clone https://github.com/NakshaShaik/Genome-Structure-Sequence-Relationship.git
 cd Genome-Structure-Sequence-Relationship
 pip install -r requirements.txt
-
-## 🔬 Methodology
-
-- Extract DNA sequences (±2000 bp) from the hg19 reference genome  
-- Convert sequences into numerical format using one-hot encoding  
-- Train a dual-branch Convolutional Neural Network (CNN)  
-- Generate distance-matched negative samples to balance the dataset  
-- Evaluate model performance using ROC-AUC and accuracy metrics  
-- Apply promoter-level data splitting to ensure unbiased testing and prevent data leakage  
-
----
-
-## 📈 Results
-
-- CNN achieves AUC up to **0.98**  
-- Significantly outperforms traditional and baseline models  
-- Demonstrates that DNA sequence contains meaningful interaction information  
-
----
-
-## 🎯 Future Enhancements
-
-- Transformer-based models (e.g., DNABERT)  
-- Integration of multi-omics data  
-- Model interpretability techniques (feature importance, attention maps)  
-- Deployment as a web-based application  
-
----
-
-## 👩‍💻 Authors
-
-- P. Sugamya  
-- Naksha Shaik  
-- D. Nithyasri  
-
----
-
-## 🏫 Institution
-
-**G. Narayanamma Institute of Technology & Science (GNITS)**  
-Affiliated to Jawaharlal Nehru Technological University Hyderabad (JNTUH)  
